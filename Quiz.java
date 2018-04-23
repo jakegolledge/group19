@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.io.*;
 import java.util.Scanner;
-import java.util.ArrayList.*;
+import java.util.ArrayList;
 
 public class Quiz {
 
@@ -11,9 +11,10 @@ public class Quiz {
 	static int rightAnswers = 0;
 	static int questionNumber = 0;
 	static String input;
-	
+
 
 	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
 		/*
 		Question q1 = new Question("CPU is short for?", new String[] {"Central Processing Unit", "Current Power U","Content Powered Unit", "Core Pi Uvi"}, "A", "computer");
 		Question q2 = new Question("Which of the following are components of Central Processing Unit (CPU) ?", new String[] {"Arithmetic logic unit, Mouse","Arithmetic logic unit, Control unit","Arithmetic logic unit, Integrated Circuits", "Control Unit, Monitor"}, "B", "computer");
@@ -33,14 +34,15 @@ public class Quiz {
 			System.out.print("Exception: "+e);
 		}
 		*/
-		Scanner sc = new Scanner(System.in);
+		
 		try {
 			System.out.println("Welcome to the Quiz system!");
+			Topic.topicMenu();
 			System.out.println("The topic of this quiz is : " + Topic.getQuizTopic() );
+			
 		}
 		catch (Exception e) {
-			System.out.println("Choose one topic as your quiz topic: ");
-			String retuentopic = in.nextLine();
+			System.out.println(e);
 		}
 
 		
